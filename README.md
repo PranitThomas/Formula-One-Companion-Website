@@ -64,5 +64,5 @@ To run the project, ensure you have:
 
 ## Images and Copyright
 
-The images used in this project are obtained from the [Formula1.com](https://www.formula1.com) website. All rights belong to the Formula One World Championship Limited.
+The images used in this project are obtained from the [Formula1.com](https://www.formula1.com) website. All rights belong to the Formula One World Championship Limited©.
 
