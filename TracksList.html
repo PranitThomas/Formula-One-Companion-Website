@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>F1 Tracklist</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #header {
+    width: 100%;
+    max-width: 100vw;
+    height: 80px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  #home-button img {
+    height: 100%;
+    width: 150px;
+    vertical-align: middle;
+  }
+  #loginButton {
+    border-radius: 4px;
+    padding: 11px 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+  }
+  #loginButton:hover {
+    background-color: rgb(40, 40, 40);
+    color: white;
+  }
+  #LightModeToggle {
+    width: 40px;
+    height: 40px;
+    background-image: url('LightModeToggle.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+  #right-buttons {
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .driver {
+    width: calc(46.33% - 20px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .driver:hover {
+    transform: translateY(-5px);
+  }
+  .driver img {
+    width: 70%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+  .driver-info {
+    padding: 10px;
+    background-color: #f5f5f5;
+    flex-grow: 1;
+    width: 100%;
+
+  }
+  #drivers-button {
+            height: 100%;
+            line-height: 80px; 
+            padding: 0 20px;
+            color: rgb(255, 255, 255); 
+            text-decoration: none; 
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.2s;
+        }
+
+        #drivers-button:hover {
+            background-color: rgb(0, 0, 0); 
+        }
+</style>
+</head>
+<body>
+    <div id="header">
+        <div id="home-button">
+            <a href="F1 Companion Project Home Page.html">
+                <img src="f1_logo.svg">
+            </a>
+        </div>
+        <a href="DriversPageFinal.html" id="drivers-button">Drivers</a>
+        <a href="TracksList.html" id="drivers-button">Tracks</a>
+        <a href="CarGameTester.html" id="drivers-button">RaceORama</a>
+        <a href="https://f1store.formula1.com/en" id="drivers-button">Store</a>
+        <div id="right-buttons">
+            <a href="Login.html" id="loginButton">Login</a>
+            <div id="LightModeToggle" onclick="toggleLightMode()"></div>
+        </div>
+    </div>
+<div class="container">
+
+    <div class="driver">
+        <img src="track1.avif" alt="Bahrain">
+        <div class="driver-info">
+            <h3>Bahrain<br> Interantional Circuit</h3>
+        </div>
+    </div>
+
+    <div class="driver">
+        <img src="track2.avif" alt="Saudi">
+        <div class="driver-info">
+            <h3>Jeddah Corniche Circuit (Saudi Arabia)</h3>
+        </div>
+    </div>
+
+    <div class="driver">
+        <img src="track3.avif" alt="Australia">
+        <div class="driver-info">
+            <h3>Albert Park Circuit (Australia)</h3>
+        </div>
+    </div>
+
+    <div class="driver">
+        <img src="track4.avif" alt="Japan">
+        <div class="driver-info">
+            <h3>Suzuka International Racing Course (Japan)</h3>
+        </div>
+    </div>
+
+    <div class="driver">
+        <img src="track5.avif" alt="China">
+        <div class="driver-info">
+            <h3>Shanghai International Circuit (China)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track6.avif" alt="Miami">
+        <div class="driver-info">
+            <h3>Miami Interantional Autodrome (USA)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track7.avif" alt="Imola">
+        <div class="driver-info">
+            <h3>Autodromo <br>Enzo e Dino Ferrari (Italy)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track8.avif" alt="Monaco">
+        <div class="driver-info">
+            <h3>Circuit de Monaco (Monaco)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track9.avif" alt="Canada">
+        <div class="driver-info">
+            <h3>Circuit Gilles-Villeneuve (Canada)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track10.avif" alt="Saudi">
+        <div class="driver-info">
+            <h3>Circuit de Barcelona-Catalunya (Spain)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track11.avif" alt="Austria">
+        <div class="driver-info">
+            <h3>Red Bull Ring<br>(Austria)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track12.avif" alt="UK">
+        <div class="driver-info">
+            <h3>Silverstone Circuit<br> (UK)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track13.avif" alt="Hungary">
+        <div class="driver-info">
+            <h3>Hungaroring<br>(Hungary)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track14.avif" alt="Belgium">
+        <div class="driver-info">
+            <h3>Circuit de Spa-Francorchamps (Belgium)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track15.avif" alt="Netherlands">
+        <div class="driver-info">
+            <h3>Circuit Zandvoort (Netherlands)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track16.avif" alt="Monza">
+        <div class="driver-info">
+            <h3>Autodromo Nazionale Monza (Italy)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track17.avif" alt="Baku">
+        <div class="driver-info">
+            <h3> Baku City Circuit (Azerbaijan)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track18.avif" alt="Singapore">
+        <div class="driver-info">
+            <h3>Marina Bay Street Circuit (Singapore)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track19.avif" alt="COTA">
+        <div class="driver-info">
+            <h3>Circuit of The Americas (USA)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track20.avif" alt="Mexico">
+        <div class="driver-info">
+            <h3>JAutodromo Hermanos Rodriguez (Mexico)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track21.avif" alt="Brazil">
+        <div class="driver-info">
+            <h3>Autodromo Jose Carlos Pace (Brazil)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track22.avif" alt="Vegas">
+        <div class="driver-info">
+            <h3>Las Vegas Strip Circuit (USA)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track23.avif" alt="Qatar">
+        <div class="driver-info">
+            <h3>Lusail International Circuit (Qatar)</h3>
+        </div>
+    </div>
+    
+    <div class="driver">
+        <img src="track24.avif" alt="UAE">
+        <div class="driver-info">
+            <h3>Yas Marina Circuit (UAE)</h3>
+        </div>
+    </div>
+    
+    
+</div>
+
+<script>
+var originalColor = true;
+
+function toggleLightMode() {
+    if (originalColor) {
+        document.body.style.background = 'white';
+    } else {
+        document.body.style.background = 'rgb(40, 40, 40)';
+    }
+    originalColor = !originalColor;
+}
+</script>
+
+</body>
+</html>

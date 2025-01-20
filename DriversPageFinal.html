@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>F1 Drivers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+
+  }
+  #header {
+    width: 100%;
+    max-width: 100vw;
+    height: 80px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  #home-button img {
+    height: 100%;
+    width: 150px;
+    vertical-align: middle;
+
+  }
+  #loginButton {
+    border-radius: 4px;
+    padding: 11px 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+  }
+  #loginButton:hover {
+    background-color: rgb(40, 40, 40);
+    color: white;
+  }
+  #LightModeToggle {
+    width: 40px;
+    height: 40px;
+    background-image: url('LightModeToggle.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+  #right-buttons {
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .driver {
+    width: calc(46.33% - 20px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+  }
+  .driver:hover {
+    transform: translateY(-5px);
+  }
+  .driver img {
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    object-fit: cover;
+  }
+  .driver-info {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+  #drivers-button {
+            height: 100%;
+            line-height: 80px; 
+            padding: 0 20px;
+            color: rgb(255, 255, 255); 
+            text-decoration: none;
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.2s;
+        }
+
+        #drivers-button:hover {
+            background-color: rgb(0, 0, 0); 
+        }
+</style>
+</head>
+<body>
+  <div id="header">
+    <div id="home-button">
+      <a href="F1 Companion Project Home Page.html">
+        <img src="f1_logo.svg">
+        </a>
+    </div>
+    <a href="DriversPageFinal.html" id="drivers-button">Drivers</a>
+        <a href="TracksList.html" id="drivers-button">Tracks</a>
+        <a href="CarGameTester.html" id="drivers-button">RaceORama</a>
+        <a href="https://f1store.formula1.com/en" id="drivers-button">Store</a>
+    
+    <div id="right-buttons">
+      <a href="Login.html" id="loginButton">Login</a>
+
+        <div id="LightModeToggle" onclick="toggleLightMode()"></div>
+    </div>
+</div>
+<div class="container">
+  <!-- Driver 1 -->
+  <div class="driver">
+    <img src="driver1.avif" >
+    <div class="driver-info">
+      <h3>Max Verstappen</h3>
+      <p>Number: #1</p>
+      <p>Points: <span id="points1">2663.5</span></p>
+      <p>Podiums: <span id="podiums1">101</span></p>
+      <p>Wins: <span id="wins1">57</span></p>
+      <p>Championships: <span id="championships1">3</span></p>
+    </div>
+  </div>
+
+  <!-- Driver 2 -->
+  <div class="driver">
+    <img src="driver2.avif" >
+    <div class="driver-info">
+      <h3>Sergio Perez</h3>
+      <p>Number: #11</p>
+      <p>Points: <span id="points2">1550</span></p>
+      <p>Podiums: <span id="podiums2">38</span></p>
+      <p>Wins: <span id="wins2">6</span></p>
+      <p>Championships: <span id="championships2">0</span></p>
+    </div>
+  </div>
+  
+ <!-- Driver 3 -->
+ <div class="driver">
+    <img src="driver3.avif" >
+    <div class="driver-info">
+      <h3>Charles Leclerc</h3>
+      <p>Number: 16</p>
+      <p>Points: <span id="points2">1133</span></p>
+      <p>Podiums: <span id="podiums2">32</span></p>
+      <p>Wins: <span id="wins2">5</span></p>
+      <p>Championships: <span id="championships2">0</span></p>
+    </div>
+  </div>
+    <!-- Driver 4 -->
+    <div class="driver">
+        <img src="driver4.avif" >
+        <div class="driver-info">
+          <h3>Carlos Sainz</h3>
+          <p>Number: #55</p>
+          <p>Points: <span id="points2">1037.5</span></p>
+          <p>Podiums: <span id="podiums2">21</span></p>
+          <p>Wins: <span id="wins2">3</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 5 -->
+    <div class="driver">
+        <img src="driver5.avif" >
+        <div class="driver-info">
+          <h3>Lando Norris</h3>
+          <p>Number: #4</p>
+          <p>Points: <span id="points2">670</span></p>
+          <p>Podiums: <span id="podiums2">14</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 6 -->
+    <div class="driver">
+        <img src="driver6.avif" >
+        <div class="driver-info">
+          <h3>Oscar Piastri</h3>
+          <p>Number: #81</p>
+          <p>Points: <span id="points2">129</span></p>
+          <p>Podiums: <span id="podiums2">2</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 7 -->
+    <div class="driver">
+        <img src="driver7.avif" >
+        <div class="driver-info">
+          <h3>Lewis Hamilton</h3>
+          <p>Number: #44</p>
+          <p>Points: <span id="points2">4649.5</span></p>
+          <p>Podiums: <span id="podiums2">197</span></p>
+          <p>Wins: <span id="wins2">103</span></p>
+          <p>Championships: <span id="championships2">7</span></p>
+        </div>
+      </div>
+    <!-- Driver 8 -->
+    <div class="driver">
+        <img src="driver8.avif" >
+        <div class="driver-info">
+          <h3>George Russell</h3>
+          <p>Number: #63</p>
+          <p>Points: <span id="points2">493</span></p>
+          <p>Podiums: <span id="podiums2">11</span></p>
+          <p>Wins: <span id="wins2">1</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 9 -->
+    <div class="driver">
+        <img src="driver9.avif" >
+        <div class="driver-info">
+          <h3>Fernando Alonso</h3>
+          <p>Number: #14</p>
+          <p>Points: <span id="points2">2291</span></p>
+          <p>Podiums: <span id="podiums2">106</span></p>
+          <p>Wins: <span id="wins2">32</span></p>
+          <p>Championships: <span id="championships2">2</span></p>
+        </div>
+      </div>
+    <!-- Driver 10 -->
+    <div class="driver">
+        <img src="driver10.avif" >
+        <div class="driver-info">
+          <h3>Lance Stroll</h3>
+          <p>Number: #18</p>
+          <p>Points: <span id="points2">277</span></p>
+          <p>Podiums: <span id="podiums2">3</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 11 -->
+    <div class="driver">
+        <img src="driver11.avif" >
+        <div class="driver-info">
+          <h3>Daniel Ricciardo</h3>
+          <p>Number: #3</p>
+          <p>Points: <span id="points2">1317</span></p>
+          <p>Podiums: <span id="podiums2">32</span></p>
+          <p>Wins: <span id="wins2">8</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 12 -->
+    <div class="driver">
+        <img src="driver12.avif" >
+        <div class="driver-info">
+          <h3>Yuki Tsunoda</h3>
+          <p>Number: #22</p>
+          <p>Points: <span id="points2">68</span></p>
+          <p>Podiums: <span id="podiums2">0</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 13 -->
+    <div class="driver">
+        <img src="driver13.avif" >
+        <div class="driver-info">
+          <h3>Alex Albon</h3>
+          <p>Number: #23</p>
+          <p>Points: <span id="points2">228</span></p>
+          <p>Podiums: <span id="podiums2">2</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 14 -->
+    <div class="driver">
+        <img src="driver14.avif" >
+        <div class="driver-info">
+          <h3>Logan Sargeant</h3>
+          <p>Number: #2</p>
+          <p>Points: <span id="points2">1</span></p>
+          <p>Podiums: <span id="podiums2">0</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 15 -->
+    <div class="driver">
+        <img src="driver15.avif" >
+        <div class="driver-info">
+          <h3>Pierre Gasly</h3>
+          <p>Number: #10</p>
+          <p>Points: <span id="points2">394</span></p>
+          <p>Podiums: <span id="podiums2">4</span></p>
+          <p>Wins: <span id="wins2">1</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 16 -->
+    <div class="driver">
+        <img src="driver16.avif" >
+        <div class="driver-info">
+          <h3>Esteban Ocon</h3>
+          <p>Number: #31</p>
+          <p>Points: <span id="points2">422</span></p>
+          <p>Podiums: <span id="podiums2">3</span></p>
+          <p>Wins: <span id="wins2">1</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 17 -->
+    <div class="driver">
+        <img src="driver17.avif" >
+        <div class="driver-info">
+          <h3>Valterri Bottas</h3>
+          <p>Number: #77</p>
+          <p>Points: <span id="points2">1797</span></p>
+          <p>Podiums: <span id="podiums2">67</span></p>
+          <p>Wins: <span id="wins2">10</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 18 -->
+    <div class="driver">
+        <img src="driver18.avif" >
+        <div class="driver-info">
+          <h3>Guanyu Zhou</h3>
+          <p>Number: #24</p>
+          <p>Points: <span id="points2">12</span></p>
+          <p>Podiums: <span id="podiums2">0</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 19 -->
+    <div class="driver">
+        <img src="driver19.avif" >
+        <div class="driver-info">
+          <h3>Kevin Magnussen</h3>
+          <p>Number: #20</p>
+          <p>Points: <span id="points2">187</span></p>
+          <p>Podiums: <span id="podiums2">1</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+    <!-- Driver 20 -->
+    <div class="driver">
+        <img src="driver20.avif" >
+        <div class="driver-info">
+          <h3>Nico Hulkenberg</h3>
+          <p>Number: #27</p>
+          <p>Points: <span id="points2">533</span></p>
+          <p>Podiums: <span id="podiums2">0</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+          <p>Championships: <span id="championships2">0</span></p>
+        </div>
+      </div>
+</div>
+
+<script>
+var originalColor = true;
+
+function toggleLightMode() {
+    if (originalColor) {
+        document.body.style.background = 'white';
+    } else {
+        document.body.style.background = 'rgb(40, 40, 40)';
+    }
+    originalColor = !originalColor;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        button{
+                    background-color: red;
+                    border: none;
+                    border-radius:25px;
+                    color: white;
+                    padding: 16px 32px;
+                    text-decoration: none;
+                    margin: 4px 2px;
+                    cursor: pointer;
+        }
+        body {
+            background-color: rgb(40, 40, 40);
+            margin: 0%;
+            padding: 0%;
+            transition: background-color 0.3s, color 0.3s;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #header {
+            width: 100%;
+            max-width: 100vw;
+            height: 80px;
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        #home-button img {
+            height: 100%;
+            width: 150px;
+            vertical-align: middle;
+        }
+
+        /* Login page specific styles */
+        .login-container {
+            width: 50%;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.825);;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.373);
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .error-message {
+            color: red;
+        }
+        #video-background {
+            position: fixed;
+            top: 80px;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="home-button">
+            <a href="F1 Companion Project Home Page.html">
+                <img src="f1_logo.svg">
+            </a>
+        </div>
+    </div>
+    <video autoplay muted loop id="video-background">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    <div class="login-container">
+        <h2 align="center" style="color: rgb(0, 0, 0);">Welcome to the Home of Motorsport</h2>
+        <form id="login-form" onsubmit="return validateForm()">
+            <input type="text" id="username" name="username" placeholder="Username">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <button type="submit" align="center">Login</button>
+            <button onclick="window.location.href='Registration.html'" align="center">New User?</button>
+
+        </form>
+        <div id="username-error" class="error-message"></div>
+        <div id="password-error" class="error-message"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var usernameError = document.getElementById("username-error");
+            var passwordError = document.getElementById("password-error");
+            var isValid = true;
+
+            // Reset error messages
+            usernameError.textContent = "";
+            passwordError.textContent = "";
+
+            // Validate username
+            if (/^\d/.test(username)) {   //starts with a num check
+                usernameError.textContent = "Username cannot start with a number";
+                isValid = false;
+            }
+
+            // Validate password length
+            if (password.length < 8) {
+                passwordError.textContent = "Password must be at least 8 characters long";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
