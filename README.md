@@ -62,6 +62,33 @@ To run the project, ensure you have:
 
 ---
 
+## Screenshots
+
+Here are some screenshots of the project:
+
+### Home Page
+![Home Page](./F1HomePage.png)
+
+### Driver Page 1
+![Driver Page 1](./F1DriverPage1.png)
+
+### Driver Page 2
+![Driver Page 2](./F1DriverPage2.png)
+
+### Tracklist Page
+![Tracklist Page](./F1TracklistPage.png)
+
+### Race-o-Rama Game
+![Race-o-Rama Game](./F1RaceoRamaGame.png)
+
+### Login Page
+![Login Page](./F1LoginPage.png)
+
+### Registration Page
+![Registration Page](./F1RegistrationPage.png)
+
+---
+
 ## Images and Copyright
 
 The images used in this project are obtained from the [Formula1.com](https://www.formula1.com) website. All rights belong to the Formula One World Championship Limited©.
